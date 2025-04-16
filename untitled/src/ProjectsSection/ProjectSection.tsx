@@ -5,11 +5,9 @@ import avatar_1 from "../assets/avatar_1.jpg";
 import greenswap_p from "../assets/preview/greenswap_preview.gif";
 import ProjectDetail from '../ProjectDetails/ProjectDetails.tsx';
 import SocialIcons from "../Components/SocialIcons/SocialIcons.tsx";
-import greenswap_video from "../assets/demo/greenswap_video.mp4";
 import greenswap_logo from "../assets/logo_greenswap.png";
 import datav_video from "../assets/demo/Data_Analysis_video.mp4"
 import datav_p from "../assets/preview/Data_Analysis_p.gif";
-import lft_video from "../assets/demo/lft_video.mp4";
 import lft_p from "../assets/preview/lft_p.gif";
 import tonight_p from "../assets/preview/tonight_p.gif";
 import tonight_logo from "../assets/logo_tonight.png";
@@ -108,7 +106,7 @@ const projects: Project[] = [
         subtitle: "Eco-friendly shopping platform",
         description: "GreenSwap is a web app that promotes sustainability by enabling users to exchange unused items within a community. Users can upload products, browse listings, and request swaps with one click. The platform includes an integrated chat for easy communication and personalized profiles to match interests. By encouraging reuse, GreenSwap fosters a circular economy in an intuitive, user-friendly way.",
         difficulty: 5,
-        videoUrl: greenswap_video,
+        videoUrl: "https://res.cloudinary.com/dkffmingn/video/upload/v1744797694/zghcaoymmamibiz8mc20.mp4",
         previewGif: greenswap_p,
         logoUrl: greenswap_logo,
         technologies: [
@@ -154,7 +152,7 @@ const projects: Project[] = [
         subtitle: "Generate an NPL with Jasmin",
         description: "This project aims to develop a compiler for a simple programming language called P, translating .lft source files into JVM bytecode. The compiler first converts P code into Jasmin assembly, which is then assembled into .class files executable on the JVM. Key constructs of P include assignments, conditionals, loops, input/output, and prefix arithmetic expressions. Jasmin is used for the final bytecode generation.",
         difficulty: 3,
-        videoUrl: lft_video,
+        videoUrl: "https://res.cloudinary.com/dkffmingn/video/upload/v1744797676/crxax0btinuk19wm9tha.mp4",
         previewGif: lft_p,
         logoUrl: "https://cdn.worldvectorlogo.com/logos/jasmin-2.svg",
         technologies: [
