@@ -11,7 +11,6 @@ import datav_video from "../assets/demo/Data_Analysis_video.mp4"
 import datav_p from "../assets/preview/Data_Analysis_p.gif";
 import lft_video from "../assets/demo/lft_video.mp4";
 import lft_p from "../assets/preview/lft_p.gif";
-import tonight_video from "../assets/demo/tonight_video.mp4";
 import tonight_p from "../assets/preview/tonight_p.gif";
 import tonight_logo from "../assets/logo_tonight.png";
 
