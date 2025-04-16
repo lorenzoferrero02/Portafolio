@@ -1,0 +1,20 @@
+/* Difficulty stars styling */
+.difficulty-section {
+    margin: 20px 0;
+}
+
+.difficulty-stars {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+}
+
+.star {
+    color: #ccc;
+    transition: all 0.2s;
+}
+
+.star.filled {
+    color: #ffc107;
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
