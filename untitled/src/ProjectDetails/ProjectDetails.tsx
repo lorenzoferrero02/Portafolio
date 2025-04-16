@@ -73,7 +73,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
                         onClick={(e) => handleFullscreen(e.currentTarget)}
                         poster={project.logoUrl}
                     >
-                        <source src={"http://localhost:5173" + project.videoUrl} type="video/mp4" />
+                        <source src={project.videoUrl} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <p className="video-hint">Click on video for fullscreen</p>
