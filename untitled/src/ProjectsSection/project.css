@@ -256,7 +256,7 @@ ul {
 /* Media queries per mobile */
 @media (max-width: 768px) {
     .side-menu {
-        width: 100%;
+        width: 10%;
         height: auto;
         position: relative;
         margin-top: 0;
