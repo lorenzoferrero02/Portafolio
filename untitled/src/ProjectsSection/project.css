@@ -252,37 +252,3 @@ ul {
     scrollbar-width: thin;
     scrollbar-color: #a777e3 transparent; /* Sfondo trasparente */
 }
-
-/* Media queries per mobile */
-@media (max-width: 768px) {
-    .side-menu {
-        width: 10%;
-        height: auto;
-        position: relative;
-        margin-top: 0;
-        padding: 15px;
-        padding-top: 80px;
-    }
-    
-    .profile-container {
-        position: static;
-        margin: 10px 0 20px 0;
-    }
-    
-    .contact-icons {
-        position: static;
-        width: 100%;
-        justify-content: flex-start;
-        padding: 15px 0;
-        margin-top: 20px;
-    }
-    
-    .project-item {
-        margin-bottom: 15px;
-        padding: 10px;
-    }
-    
-    .preview-image img {
-        max-height: 150px;
-    }
-}
