@@ -6,7 +6,6 @@ import greenswap_p from "../assets/preview/greenswap_preview.gif";
 import ProjectDetail from '../ProjectDetails/ProjectDetails.tsx';
 import SocialIcons from "../Components/SocialIcons/SocialIcons.tsx";
 import greenswap_logo from "../assets/logo_greenswap.png";
-import datav_video from "../assets/demo/Data_Analysis_video.mp4"
 import datav_p from "../assets/preview/Data_Analysis_p.gif";
 import lft_p from "../assets/preview/lft_p.gif";
 import tonight_p from "../assets/preview/tonight_p.gif";
@@ -131,7 +130,7 @@ const projects: Project[] = [
         subtitle: "Analysis on football data",
         description: "Data Analysis on Football is a Python-based project that explores and visualizes football (soccer) statistics to uncover insights and trends. Using Jupyter Notebook, the project processes datasets to analyze player performance, team dynamics, and match outcomes. Ideal for sports enthusiasts and analysts, it demonstrates how data-driven approaches can enhance understanding of the game.",
         difficulty: 1,
-        videoUrl: datav_video,
+        videoUrl: "https://res.cloudinary.com/dkffmingn/video/upload/v1744798396/Data_Analysis_video_pv330d.mp4",
         previewGif: datav_p,
         logoUrl: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
         technologies: [
