@@ -319,4 +319,44 @@
     transform: translateX(0);
 }
 
-/* ... (il resto del CSS rimane uguale) ... */
+/* Media queries per mobile - aggiunte */
+@media (max-width: 768px) {
+    .project-detail-container {
+        width: 95%;
+        left: 0;
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
+    
+    .project-content {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .project-media {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .project-video {
+        height: auto;
+        max-height: 300px;
+    }
+    
+    .title-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .project-title {
+        font-size: 1.8rem;
+    }
+    
+    .project-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .technology-logos {
+        justify-content: flex-start;
+    }
+}
