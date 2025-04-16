@@ -176,7 +176,7 @@ const projects: Project[] = [
         subtitle: "A new app for promoting events",
         description: "This project is a web application designed to promote and manage event bookings. The interface features a \"New Events\" section with a modern, responsive UI: each event is displayed as an animated card including an image, date, prices, and buttons for booking. The user experience is enhanced by smooth animations and an eye-catching design, aimed at engaging a younger audience and making event access quick and intuitive.",
         difficulty: 3,
-        videoUrl: tonight_video,
+        videoUrl: "https://res.cloudinary.com/dkffmingn/video/upload/v1744797668/asapjmrtz3hvibx0jjz3.mp4",
         previewGif: tonight_p,
         logoUrl: tonight_logo,
         technologies: [
