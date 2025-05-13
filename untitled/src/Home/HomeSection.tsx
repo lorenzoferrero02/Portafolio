@@ -4,7 +4,7 @@ import { Avatar } from "../Components/Avatar/Avatar.tsx";
 import { Button } from "../Components/Button/Button.tsx";
 import ProjectSection from "../ProjectsSection/ProjectSection.tsx";
 import "./home.css";
-import avatar_1 from "../assets/avatar_1.jpg";
+import avatar_1 from "../assets/photo_2025-05-13_10-09-26.jpg";
 import ParticlesBackground from "../Components/ParticlesBackground/ParticlesBackground.tsx";
 import SocialIcons from "../Components/SocialIcons/SocialIcons.tsx";
 
