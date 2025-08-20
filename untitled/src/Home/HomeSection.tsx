@@ -41,7 +41,7 @@ function HomeSection() {
                         </motion.h1>
 
                         <motion.p className="home-description" {...animationProps}>
-                            <span className="typing-text"> Developer | UI Designer | Fintech Enthusiast</span>
+                            <span className="typing-text"> Developer | Cyber Engineer | Fintech Enthusiast</span>
                         </motion.p>
 
                         <motion.div {...animationProps}>
