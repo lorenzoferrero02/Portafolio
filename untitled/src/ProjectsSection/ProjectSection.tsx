@@ -10,7 +10,9 @@ import datav_p from "../assets/preview/Data_Analysis_p.gif";
 import lft_p from "../assets/preview/lft_p.gif";
 import tonight_p from "../assets/preview/tonight_p.gif";
 import tonight_logo from "../assets/logo_tonight.png";
-
+import wpahunter_p from "../assets/preview/wpa-hunter_p.gif";
+import wpahunter_logo from "../assets/logo_wpa-hunter.png";
+import wpahunter_demo from "../assets/demo/wpahunter_video.mp4";
 
 interface Project {
     id: number;
@@ -29,57 +31,7 @@ interface Project {
 }
 
 const DifficultyAvatar = ({ difficulty }: { difficulty: number }) => {
-    const avatars = [
-        // Livello 1 - Facile (Sorriso tranquillo)
-        <svg key="1" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" fill="#E8F5E9" stroke="#4CAF50" strokeWidth="1.5" />
-            <circle cx="9" cy="10" r="1.2" fill="#4CAF50" />
-            <circle cx="15" cy="10" r="1.2" fill="#4CAF50" />
-            <path d="M9 15C9 16 10.5 17 12 17C13.5 17 15 16 15 15" stroke="#4CAF50" strokeWidth="1.5" strokeLinecap="round" />
-            <animateTransform attributeName="transform" type="scale" values="1;1.02;1" dur="3s" repeatCount="indefinite" />
-        </svg>,
-
-        // Livello 2 - Medio (Faccina neutra)
-        <svg key="2" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" fill="#FFF8E1" stroke="#FFC107" strokeWidth="1.5" />
-            <circle cx="9" cy="10" r="1.2" fill="#FFC107" />
-            <circle cx="15" cy="10" r="1.2" fill="#FFC107" />
-            <path d="M9 15H15" stroke="#FFC107" strokeWidth="1.5" strokeLinecap="round" />
-            <animateTransform attributeName="transform" type="rotate" values="0;1.5;0;-1.5;0" dur="4s" repeatCount="indefinite" />
-        </svg>,
-
-        // Livello 3 - Impegnativo (Faccina preoccupata)
-        <svg key="3" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" fill="#FFECB3" stroke="#FF9800" strokeWidth="1.5" />
-            <circle cx="9" cy="10" r="1.2" fill="#FF9800" />
-            <circle cx="15" cy="10" r="1.2" fill="#FF9800" />
-            <path d="M9 15C9 16 10.5 16.5 12 16.5C13.5 16.5 15 16 15 15" stroke="#FF9800" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M12 7L12 8" stroke="#FF9800" strokeWidth="1.5" strokeLinecap="round" />
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -1;0 1;0 0" dur="2s" repeatCount="indefinite" />
-        </svg>,
-
-        // Livello 4 - Difficile (Faccina stressata)
-        <svg key="4" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" fill="#FFCDD2" stroke="#F44336" strokeWidth="1.5" />
-            <circle cx="9" cy="10" r="1.2" fill="#F44336" />
-            <circle cx="15" cy="10" r="1.2" fill="#F44336" />
-            <path d="M9 16C9 14.5 10.5 14 12 14C13.5 14 15 14.5 15 16" stroke="#F44336" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M10 7L12 8L14 7" stroke="#F44336" strokeWidth="1.5" strokeLinecap="round" />
-            <animateTransform attributeName="transform" type="rotate" values="0;2;0;-2;0" dur="1.5s" repeatCount="indefinite" />
-        </svg>,
-
-        // Livello 5 - Estremo (Faccina esplosa)
-        <svg key="5" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" fill="#F3E5F5" stroke="#9C27B0" strokeWidth="1.5" />
-            <circle cx="8.5" cy="10" r="1.2" fill="#9C27B0" />
-            <circle cx="15.5" cy="10" r="1.2" fill="#9C27B0" />
-            <path d="M9 16C9 14 10.5 13.5 12 13.5C13.5 13.5 15 14 15 16" stroke="#9C27B0" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M12 6L12 8" stroke="#9C27B0" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M7 5L9 7" stroke="#9C27B0" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M17 5L15 7" stroke="#9C27B0" strokeWidth="1.5" strokeLinecap="round" />
-            <animateTransform attributeName="transform" type="rotate" values="0;5;0;-5;0" dur="0.8s" repeatCount="indefinite" />
-        </svg>
-    ];
+    
 
     return (
         <span
@@ -93,7 +45,6 @@ const DifficultyAvatar = ({ difficulty }: { difficulty: number }) => {
                 transition: "transform 0.2s ease, filter 0.3s ease"
             }}
         >
-            {avatars[Math.min(Math.max(difficulty - 1, 0), avatars.length - 1)]}
         </span>
     );
 };
@@ -101,6 +52,23 @@ const DifficultyAvatar = ({ difficulty }: { difficulty: number }) => {
 const projects: Project[] = [
     {
         id: 1,
+        title: "WPA Hunter",
+        subtitle: "Automated Wi-Fi security assessment tool",
+        description: "WPA Hunter is a Python-based CLI tool that automates WPA/WPA2 security testing workflows. It wraps the usual manual steps — wireless interface setup, network discovery, handshake capture, and cracking — into a single guided workflow built on top of Aircrack-ng and Hashcat. Supports dictionary, mask, and rule-based cracking attacks, with hidden SSID detection and targeted deauthentication. Built for authorized security testing and penetration testing engagements.",
+        difficulty: 4,
+        videoUrl: wpahunter_demo,
+        previewGif: wpahunter_p,
+        logoUrl: wpahunter_logo,
+        technologies: [
+            {
+                name: "Python",
+                logo: "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+            }
+        ],
+        githubRepo: "https://github.com/lorenzoferrero02/WPA-hunter"
+    },
+    {
+        id: 2,
         title: "Greenswap",
         subtitle: "Eco-friendly shopping platform",
         description: "GreenSwap is a web app that promotes sustainability by enabling users to exchange unused items within a community. Users can upload products, browse listings, and request swaps with one click. The platform includes an integrated chat for easy communication and personalized profiles to match interests. By encouraging reuse, GreenSwap fosters a circular economy in an intuitive, user-friendly way.",
@@ -111,7 +79,7 @@ const projects: Project[] = [
         technologies: [
             {
                 name: "React",
-                logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+                logo: "https://cdn.worldvectorlogo.com/logos/react-academy.svg"
             },
             {
                 name: "TypeScript",
@@ -119,13 +87,13 @@ const projects: Project[] = [
             },
             {
                 name: "PostgreSQL",
-                logo: "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+                logo: "https://cdn.worldvectorlogo.com/logos/postgresql-inc.svg"
             }
         ],
         githubRepo: "https://github.com/lorenzoferrero02/green-swap-thesis"
     },
     {
-        id: 2,
+        id: 3,
         title: "Data Analysis",
         subtitle: "Analysis on football data",
         description: "Data Analysis on Football is a Python-based project that explores and visualizes football (soccer) statistics to uncover insights and trends. Using Jupyter Notebook, the project processes datasets to analyze player performance, team dynamics, and match outcomes. Ideal for sports enthusiasts and analysts, it demonstrates how data-driven approaches can enhance understanding of the game.",
@@ -146,7 +114,7 @@ const projects: Project[] = [
         githubRepo: "https://github.com/lorenzoferrero02/Data-Analysis"
     },
     {
-        id: 3,
+        id: 4,
         title: "A New Programming Language",
         subtitle: "Generate an NPL with Jasmin",
         description: "This project aims to develop a compiler for a simple programming language called P, translating .lft source files into JVM bytecode. The compiler first converts P code into Jasmin assembly, which is then assembled into .class files executable on the JVM. Key constructs of P include assignments, conditionals, loops, input/output, and prefix arithmetic expressions. Jasmin is used for the final bytecode generation.",
@@ -167,7 +135,7 @@ const projects: Project[] = [
         githubRepo: "https://github.com/lorenzoferrero02/New-Programming-Language"
     },
     {
-        id: 4,
+        id: 5,
         title: "TOnight",
         subtitle: "A new app for promoting events",
         description: "This project is a web application designed to promote and manage event bookings. The interface features a \"New Events\" section with a modern, responsive UI: each event is displayed as an animated card including an image, date, prices, and buttons for booking. The user experience is enhanced by smooth animations and an eye-catching design, aimed at engaging a younger audience and making event access quick and intuitive.",
@@ -178,7 +146,7 @@ const projects: Project[] = [
         technologies: [
             {
                 name: "React",
-                logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+                logo: "https://cdn.worldvectorlogo.com/logos/react-academy.svg"
             },
             {
                 name: "TypeScript",
@@ -186,7 +154,7 @@ const projects: Project[] = [
             },
             {
                 name: "PostgreSQL",
-                logo: "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+                logo: "https://cdn.worldvectorlogo.com/logos/postgresql-inc.svg"
             }
         ],
         githubRepo: "https://github.com/lorenzoferrero02/TO-night"
