@@ -1,14 +1,23 @@
+import React from 'react';
+import { useIsMobile } from './hooks';
+import { MobileApp } from './Mobile/MobileApp';
+// Importa i tuoi componenti desktop esistenti
+import HomeSection from './Home/HomeSection'; 
+import './App.css';
 
-import './App.css'
-import HomeSection from "./Home/HomeSection.tsx";
+export function App() {
+  const isMobile = useIsMobile(768);
 
-function App() {
+  if (isMobile) {
+    return <MobileApp />;
+  }
 
   return (
-      <div>
-        <HomeSection></HomeSection>
-      </div>
-  )
+    <div className="desktop-container">
+      <HomeSection />
+      {/* Altri componenti desktop esistenti */}
+    </div>
+  );
 }
 
-export default App
+export default App;

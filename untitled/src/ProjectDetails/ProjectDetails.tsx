@@ -1,26 +1,11 @@
 import React from 'react';
 import './projectDetails.css';
 import {Level} from "../Components/Level/Level.tsx";
+import {Project} from "../projects.ts";
 
-interface ProjectDetailProps {
-    project: {
-        id: number;
-        title: string;
-        subtitle?: string;
-        description: string;
-        difficulty: number;
-        previewGif?: string;
-        videoUrl: string;
-        logoUrl?: string;
-        technologies: {
-            name: string;
-            logo: string;
-        }[];
-        githubRepo?: string;
-    };
-}
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
+
+const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
     const handleFullscreen = (element: HTMLVideoElement) => {
         if (element.requestFullscreen) {
             element.requestFullscreen();
