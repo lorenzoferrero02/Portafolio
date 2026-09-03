@@ -1,4 +1,3 @@
-import React from 'react';
 import { useIsMobile } from './hooks';
 import { MobileApp } from './Mobile/MobileApp';
 // Importa i tuoi componenti desktop esistenti
