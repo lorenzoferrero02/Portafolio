@@ -299,3 +299,334 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ============ MARKDOWN BODY ============ */
+.writeup-body {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #d8d8e4;
+  letter-spacing: 0.005em;
+}
+
+/* Headings */
+.writeup-body h1,
+.writeup-body h2,
+.writeup-body h3,
+.writeup-body h4 {
+  color: #fff;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  scroll-margin-top: 6rem;
+}
+
+.writeup-body h1 {
+  font-size: 1.75rem;
+  margin: 3rem 0 1.25rem;
+}
+
+.writeup-body h2 {
+  font-size: 1.45rem;
+  margin: 3rem 0 1.15rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.writeup-body h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, #3c60ed, #ff7eb3);
+  border-radius: 2px;
+}
+
+.writeup-body h3 {
+  font-size: 1.18rem;
+  margin: 2.25rem 0 0.85rem;
+  color: #f0f0f8;
+}
+
+.writeup-body h4 {
+  font-size: 1rem;
+  margin: 1.75rem 0 0.6rem;
+  color: #e0e0ee;
+}
+
+/* Paragrafi */
+.writeup-body p {
+  margin: 1.15rem 0;
+}
+
+/* Liste */
+.writeup-body ul,
+.writeup-body ol {
+  padding-left: 1.6rem;
+  margin: 1.15rem 0;
+}
+
+.writeup-body li {
+  margin: 0.5rem 0;
+  padding-left: 0.15rem;
+}
+
+.writeup-body li::marker {
+  color: #7ea8ff;
+  font-weight: 600;
+}
+
+.writeup-body ul ul,
+.writeup-body ol ol,
+.writeup-body ul ol,
+.writeup-body ol ul {
+  margin: 0.5rem 0;
+}
+
+/* Link */
+.writeup-body a {
+  color: #7ea8ff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(126, 168, 255, 0.3);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.writeup-body a:hover {
+  color: #a5b4fc;
+  border-bottom-color: #a5b4fc;
+}
+
+/* Inline code */
+.writeup-body :not(pre) > code {
+  background: rgba(60, 96, 237, 0.12);
+  border: 1px solid rgba(60, 96, 237, 0.25);
+  color: #c7d2fe;
+  padding: 0.15rem 0.45rem;
+  border-radius: 5px;
+  font-size: 0.875em;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+/* ============ CODE BLOCKS ============ */
+.code-block {
+  position: relative;
+  margin: 1.75rem 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 15, 22, 0.9);
+  overflow: hidden;
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.code-block-lang {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a8aa3;
+}
+
+.code-block-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #b8b8cc;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.code-block-copy:hover {
+  color: #fff;
+  background: rgba(60, 96, 237, 0.15);
+  border-color: rgba(60, 96, 237, 0.45);
+}
+
+.code-block-copy.copied {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  border-color: rgba(74, 222, 128, 0.35);
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1.15rem 1.25rem;
+  overflow-x: auto;
+  background: transparent !important;
+  border: none;
+  border-radius: 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.code-block pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+/* Override dello sfondo di highlight.js */
+.code-block .hljs {
+  background: transparent !important;
+  padding: 0;
+}
+
+/* Scrollbar del code block */
+.code-block pre::-webkit-scrollbar {
+  height: 8px;
+}
+.code-block pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+.code-block pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+.code-block pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============ BLOCKQUOTE ============ */
+.writeup-body blockquote {
+  margin: 1.75rem 0;
+  padding: 0.9rem 1.15rem;
+  border-left: 3px solid #3c60ed;
+  background: rgba(60, 96, 237, 0.06);
+  border-radius: 0 10px 10px 0;
+  color: #b8b8d0;
+  font-style: normal;
+}
+
+.writeup-body blockquote p {
+  margin: 0.35rem 0;
+}
+
+.writeup-body blockquote p:first-child {
+  margin-top: 0;
+}
+.writeup-body blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============ IMMAGINI ============ */
+.writeup-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1.75rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ TABELLE ============ */
+.writeup-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.writeup-body thead {
+  background: rgba(60, 96, 237, 0.12);
+}
+
+.writeup-body th,
+.writeup-body td {
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: left;
+}
+
+.writeup-body th {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.writeup-body tr:last-child td {
+  border-bottom: none;
+}
+
+.writeup-body tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ============ HR ============ */
+.writeup-body hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  margin: 2.5rem 0;
+}
+
+/* ============ ANIMAZIONE ============ */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 640px) {
+  .writeup-body {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .writeup-body h2 {
+    font-size: 1.3rem;
+    margin: 2.25rem 0 1rem;
+  }
+
+  .writeup-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .code-block pre {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  .code-block-header {
+    padding: 0.4rem 0.7rem;
+  }
+
+  .code-block-lang {
+    font-size: 0.68rem;
+  }
+
+  .code-block-copy {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+}

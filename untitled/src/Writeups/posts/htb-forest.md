@@ -9,7 +9,7 @@ tags: ["active-directory", "windows", "asrep-roasting"]
 
 ## Enumeration
 
-Partiamo con un `nmap` per vedere le porte aperte:
+This a template box.
 
 ```bash
 nmap -sC -sV -p- 10.10.10.161
