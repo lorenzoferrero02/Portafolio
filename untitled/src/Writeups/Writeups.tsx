@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { writeups, type WriteupMeta } from './loader';
 import { WriteupDetail } from './WriteupDetail';
-import './Writeups.css';
+import './writeups.css';
 
 interface WriteupsProps {
   onBack: () => void;
