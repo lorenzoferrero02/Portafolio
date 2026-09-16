@@ -25,10 +25,10 @@ const itemVariants = {
 };
 
 const SKILLS = [
-  'Cybersecurity',
+  'Pentesting',
+  'Red Teaming',
   'React',
   'Python',
-  'Pentesting',
   'TypeScript',
   'Linux',
 ];
@@ -61,13 +61,13 @@ export function Landing({ onNavigate, projectCount, writeupCount }: LandingProps
 
         <motion.p variants={itemVariants} className="landing-tagline">
           <span className="typing-text">
-            Developer | Cyber Engineer | Fintech Enthusiast
+            Security Engineer | Developer | Fintech Enthusiast
           </span>
         </motion.p>
 
         <motion.p variants={itemVariants} className="landing-bio">
-          I build things, break things, and write about it. Currently focused on
-          offensive security, full-stack development, and the occasional CTF.
+          I build things, break things and write about it. Currently focused on
+          offensive security, CTF and web/mobile development.
         </motion.p>
 
         <motion.div variants={itemVariants} className="landing-skills">
@@ -89,7 +89,7 @@ export function Landing({ onNavigate, projectCount, writeupCount }: LandingProps
             </div>
             <h2 className="landing-card-title">Projects</h2>
             <p className="landing-card-desc">
-              Full-stack apps, security tools, and side experiments.
+              Full-stack apps, security tools and side experiments.
             </p>
             <span className="landing-card-cta">
               Explore <span className="landing-card-arrow">→</span>
