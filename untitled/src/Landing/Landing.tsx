@@ -3,7 +3,7 @@ import { Avatar } from '../Components/Avatar/Avatar';
 import SocialIcons from '../Components/SocialIcons/SocialIcons';
 import ParticlesBackground from '../Components/ParticlesBackground/ParticlesBackground';
 import avatar_1 from '../assets/photo_2025-05-13_10-09-26.jpg';
-import './Landing.css';
+import './landing.css';
 
 interface LandingProps {
   onNavigate: (view: 'projects' | 'writeups') => void;
