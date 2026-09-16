@@ -1,320 +1,284 @@
-.project-detail-container {
-    width: 75%;
-    max-width: 1200px;
-    height: 80%;
-    margin: 2rem auto;
-    padding: 2.5rem;
-    position: relative;
-    left: 7%;
-    background: linear-gradient(135deg,
-    rgba(184, 126, 255, 0.9) 0%,
-    rgba(60, 96, 237, 0.85) 50%,
-    rgba(188, 130, 236, 0.9) 100%);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
-    inset 0 0 15px rgba(255, 255, 255, 0.3);
-    overflow: hidden;
-    color: white;
-    transition: all 0.4s ease;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+.project-detail {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(30, 30, 47, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
 }
 
-.project-detail-container::before {
-    content: '';
-    position: absolute;
-    top: -40%;
-    left: 14%;
-    width: 60%;
-    height: 181%;
-    background: radial-gradient(circle,
-    rgba(255, 255, 255, 0.1) 0%,
-    transparent 100%);
-    animation: rotate 15s linear infinite;
-    z-index: 0;
+/* ============ HERO ============ */
+.project-detail-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
 }
 
-.project-detail-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+.project-detail-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-width: 0;
+  flex: 1;
 }
 
-.project-detail-container > * {
-    position: relative;
-    z-index: 1;
+.project-detail-logo-wrapper {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.project-content {
-    display: flex;
-    gap: 2rem;
-    height: 700px;
+.project-detail-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-.project-text {
-    flex: 1;
+.project-detail-heading {
+  min-width: 0;
 }
 
-.project-title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #e2fdff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.project-detail-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(45deg, #ffffff, #0e7c9e, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pd-gradient 5s ease infinite;
 }
 
-.project-subtitle {
-    font-size: 1.5rem;
-    margin: 0 0 1.5rem;
-    color: #c7e4e5bd;
-    font-weight: normal;
+.project-detail-subtitle {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #9999b3;
+  margin: 0;
+  line-height: 1.5;
 }
 
-.project-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #f0f0ff;
+.project-detail-meta {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  background: rgba(60, 96, 237, 0.1);
+  border: 1px solid rgba(60, 96, 237, 0.3);
+  border-radius: 999px;
 }
 
-.project-media {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.project-detail-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
 }
 
-.project-video {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+/* ============ TECNOLOGIE ============ */
+.project-detail-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
 }
 
-.project-video:hover {
-    transform: scale(1.02);
+.project-detail-tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #d0d0e0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  transition: all 0.2s ease;
 }
 
-.video-hint {
-    margin-top: 0.5rem;
-    text-align: center;
-    color: #d0d0ff;
-    font-size: 0.9rem;
+.project-detail-tech-pill:hover {
+  border-color: rgba(60, 96, 237, 0.5);
+  background: rgba(60, 96, 237, 0.1);
+  color: #fff;
 }
 
-.title-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+.project-detail-tech-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
-.project-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+/* ============ VIDEO ============ */
+.project-detail-media {
+  margin-bottom: 2rem;
 }
 
-.project-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+.project-detail-video {
+  width: 100%;
+  max-height: 520px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0f;
+  display: block;
+  object-fit: contain;
+  cursor: pointer;
+  transition: border-color 0.25s ease;
 }
 
-.technologies-section {
-    margin-top: 1rem;
+.project-detail-video:hover {
+  border-color: rgba(60, 96, 237, 0.5);
 }
 
-.technologies-section h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    color: #e2fdff;
-    text-align: center;
+.project-detail-video-hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6c6c85;
+  margin: 0.65rem 0 0;
 }
 
-.technology-logos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
+/* ============ DESCRIZIONE ============ */
+.project-detail-description {
+  margin-bottom: 2rem;
 }
 
-.technology-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.project-detail-description h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.85rem;
+  letter-spacing: -0.01em;
+  color: #fff;
 }
 
-.technology-logo {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+.project-detail-description p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #b8b8cc;
+  margin: 0;
 }
 
-.technology-logo:hover {
-    transform: scale(1.1);
+/* ============ GITHUB ============ */
+.project-detail-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 1.4rem;
+  background: rgba(20, 20, 32, 0.8);
+  color: #e0e0f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.technology-name {
-    font-size: 0.8rem;
-    margin-top: 0.3rem;
-    color: #d0d0ff;
-}
-
-.github-repo {
-    margin-top: 2rem;
-}
-
-.github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #0366d6;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.github-link:hover {
-    background-color: #f6f8fa;
-}
-
-.github-logo {
-    width: 20px;
-    height: 20px;
-}
-
-@keyframes rotate {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (max-width: 768px) {
-    .project-detail-container {
-        width: 95%;
-        padding: 1.5rem;
-        margin: 1rem auto;
-    }
-
-    .project-content {
-        flex-direction: column;
-    }
-
-    .project-media {
-        max-width: 100%;
-        margin-top: 2rem;
-    }
-
-    .project-title {
-        font-size: 2rem;
-    }
-
-    .project-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .title-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .project-logo {
-        margin-bottom: 0.5rem;
-    }
-}
-
-.project-video {
-    width: 100%;
-    height: 55%;
-    object-fit: contain;
-}
-
-
-/* ... (tutto il CSS precedente rimane uguale) ... */
-
-.github-repo {
-    margin-top: 2rem;
-}
-
-.github-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: linear-gradient(135deg, #2b3137 0%, #1a1f24 100%);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.github-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
+.project-detail-github::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
     transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent);
-    transition: all 0.5s ease;
+    rgba(60, 96, 237, 0.15),
+    transparent
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
 }
 
-.github-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15),
-    0 3px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #3a424a 0%, #242a30 100%);
+.project-detail-github:hover {
+  transform: translateY(-3px);
+  border-color: rgba(60, 96, 237, 0.5);
+  box-shadow: 0 12px 30px rgba(60, 96, 237, 0.25);
+  color: #fff;
 }
 
-.github-button:hover::before {
-    left: 100%;
+.project-detail-github:hover::before {
+  left: 100%;
 }
 
-.github-button:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.08);
+.project-detail-github-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease;
 }
 
-.github-icon {
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease;
+.project-detail-github:hover .project-detail-github-icon {
+  transform: scale(1.1);
 }
 
-.github-button:hover .github-icon {
-    transform: scale(1.1);
+.project-detail-github-arrow {
+  color: #6c6c85;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.github-text {
-    position: relative;
-    transition: all 0.3s ease;
+.project-detail-github:hover .project-detail-github-arrow {
+  transform: translateX(4px);
+  color: #a5b4fc;
 }
 
-.github-button:hover .github-text {
-    letter-spacing: 0.5px;
+/* ============ ANIMAZIONI ============ */
+@keyframes pd-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.github-arrow {
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.3s ease;
-}
+/* ============ RESPONSIVE ============ */
+@media (max-width: 640px) {
+  .project-detail {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
 
-.github-button:hover .github-arrow {
-    opacity: 1;
-    transform: translateX(0);
+  .project-detail-hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-detail-hero-left {
+    gap: 1rem;
+  }
+
+  .project-detail-logo-wrapper {
+    width: 52px;
+    height: 52px;
+    padding: 8px;
+  }
+
+  .project-detail-meta {
+    align-self: flex-start;
+  }
+
+  .project-detail-video {
+    max-height: 320px;
+  }
 }

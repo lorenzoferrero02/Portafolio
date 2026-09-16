@@ -1,5 +1,5 @@
 import React from 'react';
-import {MobileHome} from './MobileHome';
+import { MobileHome } from './MobileHome';
 import './mobile.css';
 
 export const MobileApp: React.FC = () => {

@@ -1,21 +1,47 @@
+import { useState } from 'react';
 import { useIsMobile } from './hooks';
 import { MobileApp } from './Mobile/MobileApp';
-// Importa i tuoi componenti desktop esistenti
-import HomeSection from './Home/HomeSection'; 
+import { Landing } from './Landing/Landing';
+import { Writeups } from './Writeups/Writeups';
+import { projects } from './projects';
+import { writeups } from './Writeups/loader';
 import './App.css';
+import ProjectSection from './ProjectsSection/ProjectSection';
+
+type View = 'landing' | 'projects' | 'writeups';
 
 export function App() {
   const isMobile = useIsMobile(768);
+  const [view, setView] = useState<View>('landing');
 
-  if (isMobile) {
-    return <MobileApp />;
+  if (view === 'landing') {
+    return (
+      <Landing
+        onNavigate={setView}
+        projectCount={projects.length}
+        writeupCount={writeups.length}
+      />
+    );
   }
 
+  if (view === 'writeups') {
+    return <Writeups onBack={() => setView('landing')} />;
+  }
+
+  // view === 'projects'
   return (
-    <div className="desktop-container">
-      <HomeSection />
-      {/* Altri componenti desktop esistenti */}
-    </div>
+    <>
+      <button className="back-btn" onClick={() => setView('landing')}>
+        ← Home
+      </button>
+      {isMobile ? (
+        <MobileApp />
+      ) : (
+        <div className="desktop-container">
+          <ProjectSection onBack={() => setView('landing')} />
+        </div>
+      )}
+    </>
   );
 }
 
