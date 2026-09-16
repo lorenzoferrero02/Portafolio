@@ -1,9 +1,10 @@
 import './social.css';
+import type { ReactNode } from 'react';
 
 interface SocialLink {
   href: string;
   label: string;
-  icon: JSX.Element;
+  icon: ReactNode;
 }
 
 const GitHubIcon = () => (
